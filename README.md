@@ -4,9 +4,16 @@ Keeps current URL in session for controller actions so we can return to it if ne
 
 ### Install via Composer
 
-In "composer.json" your project, add the section "require" the following line:
+In "composer.json" your project, add the following lines:
 
 ~~~
+    "repositories": [
+        ...
+        {
+            "type": "vcs",
+            "url": "https://github.com/nezhelskoy/yii2-return-url"
+        }
+    ],
     "require": {
         ...
         "nezhelskoy/yii2-return-url": "*"
