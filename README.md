@@ -41,7 +41,7 @@ In your controller add ReturnUrl behavior:
     }
 ~~~
 
-Then method *getReturnUrl()* of application component *User* will return the prevous visited url.
+Then method *getReturnUrl()* of application component *User* will return the previously visited url.
 
 ## License
 
