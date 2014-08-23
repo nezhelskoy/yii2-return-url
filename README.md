@@ -41,8 +41,21 @@ In your controller add ReturnUrl behavior:
     }
 ~~~
 
-Then method *getReturnUrl()* of application component *User* will return the previously visited url.
+For access to previously visited url:
 
+~~~
+echo yii\helpers\Url::previous('visitedUrl');
+~~~
+
+For rename session parameter *visitedUrl* change behavior settings:
+
+~~~
+        'returnUrl' => [
+            'class' => 'nezhelskoy\returnUrl\ReturnUrl',
+            'visitedParam' => 'newParamName',
+        ],
+~~~
+ 
 ## License
 
 yii2-return-url is released under the BSD License. See [LICENSE.md](https://github.com/nezhelskoy/yii2-return-url/blob/master/LICENSE.md) file for
