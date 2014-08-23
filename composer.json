@@ -1,8 +1,8 @@
 {
     "name": "nezhelskoy/yii2-return-url",
-    "description": "Yii2 returnUrl filter",
+    "description": "Yii2 ReturnUrl filter",
     "type": "yii2-extension",
-    "keywords": ["yii2", "returnUrl"],
+    "keywords": ["yii2", "ReturnUrl", "filter"],
     "license": "BSD-3-Clause",
     "authors": [
         {

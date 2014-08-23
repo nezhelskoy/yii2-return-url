@@ -1,4 +1,4 @@
-# Yii2 returnUrl filter
+# Yii2 ReturnUrl filter
 
 Keeps current URL in session for controller actions so we can return to it if needed.
 
