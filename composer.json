@@ -1,0 +1,24 @@
+{
+    "name": "nezhelskoy/yii2-return-url",
+    "description": "Yii2 returnUrl filter",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "returnUrl"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Dmitry Nezhelskoy",
+            "email": "dmitry@nezhelskoy.ru",
+            "homepage": "http://nezhelskoy.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "nezhelskoy\\returnUrl\\": ""
+        }
+    }
+}
