@@ -6,18 +6,18 @@ Keeps current URL in session for controller actions so we can return to it if ne
 
 In "composer.json" your project, add the following lines:
 
-~~~
-    "repositories": [
-        ...
-        {
-            "type": "vcs",
-            "url": "https://github.com/nezhelskoy/yii2-return-url"
-        }
-    ],
-    "require": {
-        ...
-        "nezhelskoy/yii2-return-url": "*"
-    },
+~~~javascript
+"repositories": [
+    ...
+    {
+        "type": "vcs",
+        "url": "https://github.com/nezhelskoy/yii2-return-url"
+    }
+],
+"require": {
+    ...
+    "nezhelskoy/yii2-return-url": "*"
+},
 ~~~
 
 Then update your project:
@@ -30,19 +30,32 @@ php composer.phar update --prefer-dist
 
 In your controller add ReturnUrl behavior:
 
-~~~
-    public function behaviors()
-    {
-        return [
-            'returnUrl' => [
-                'class' => 'nezhelskoy\returnUrl\ReturnUrl',
-            ],
-        ];
-    }
+~~~php
+public function behaviors()
+{
+    return [
+        'returnUrl' => [
+            'class' => 'nezhelskoy\returnUrl\ReturnUrl',
+        ],
+    ];
+}
 ~~~
 
-Then method *getReturnUrl()* of application component *User* will return the previously visited url.
+For access to previously visited url:
 
+~~~php
+yii\helpers\Url::previous('visitedUrl');
+~~~
+
+For rename session parameter *visitedUrl* change behavior settings:
+
+~~~php
+'returnUrl' => [
+    'class' => 'nezhelskoy\returnUrl\ReturnUrl',
+    'visitedParam' => 'newParamName',
+],
+~~~
+ 
 ## License
 
 yii2-return-url is released under the BSD License. See [LICENSE.md](https://github.com/nezhelskoy/yii2-return-url/blob/master/LICENSE.md) file for
