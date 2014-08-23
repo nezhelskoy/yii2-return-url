@@ -9,6 +9,7 @@ namespace nezhelskoy\returnUrl;
 
 use Yii;
 use yii\base\ActionFilter;
+use yii\helpers\Url;
 
 /**
  * ReturnUrl filter
@@ -20,6 +21,8 @@ use yii\base\ActionFilter;
  */
 class ReturnUrl extends ActionFilter
 {
+    
+    public $visitedParam = 'visitedUrl';
     /**
      * This method is invoked right after an action is executed.
      * You may override this method to do some postprocessing for the action.
@@ -30,7 +33,7 @@ class ReturnUrl extends ActionFilter
     public function afterAction($action, $result)
     {
         if ( ! Yii::$app->request->getIsAjax()) {
-            Yii::$app->user->setReturnUrl(Yii::$app->request->getUrl());
+            Url::remember(Yii::$app->request->getUrl(), $this->visitedParam);
         }
         return $result;
     }
