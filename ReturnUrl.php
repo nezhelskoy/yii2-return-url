@@ -21,16 +21,17 @@ use yii\base\ActionFilter;
 class ReturnUrl extends ActionFilter
 {
     /**
-     * This method is invoked right before an action is to be executed (after all possible filters.)
-     * You may override this method to do last-minute preparation for the action.
-     * @param Action $action the action to be executed.
-     * @return boolean whether the action should continue to be executed.
+     * This method is invoked right after an action is executed.
+     * You may override this method to do some postprocessing for the action.
+     * @param Action $action the action just executed.
+     * @param mixed $result the action execution result
+     * @return mixed the processed action result.
      */
-    public function beforeAction($action)
+    public function afterAction($action, $result)
     {
         if ( ! Yii::$app->request->getIsAjax()) {
             Yii::$app->user->setReturnUrl(Yii::$app->request->getUrl());
         }
-        return true;
+        return $result;
     }
 }
