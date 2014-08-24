@@ -1,5 +1,6 @@
 <?php
 /**
+ * @author Dmitry Nezhelskoy <dmitry@nezhelskoy.ru>
  * @link https://github.com/nezhelskoy/yii2-return-url
  * @copyright Copyright (c) 2014 Dmitry Nezhelskoy
  * @license "BSD-3-Clause"
@@ -14,10 +15,7 @@ use yii\helpers\Url;
 /**
  * ReturnUrl filter
  * 
- * Keep current URL (if it's not an AJAX url) in session so that the browser may
- * be redirected back.
- *
- * @author Dmitry Nezhelskoy <dmitry@nezhelskoy.ru>
+ * Keep current URL (if it's not an AJAX url) in session so that the browser may be redirected back.
  */
 class ReturnUrl extends ActionFilter
 {
