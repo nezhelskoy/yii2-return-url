@@ -1,8 +1,8 @@
 <?php
 /**
- * @author Dmitry Nezhelskoy <dmitry@nezhelskoy.ru>
+ * @author Dmitry A. Nezhelskoy <dmitry@nezhelskoy.pro>
  * @link https://github.com/nezhelskoy/yii2-return-url
- * @copyright Copyright (c) 2014 Dmitry Nezhelskoy
+ * @copyright Copyright (c) 2014 - 2016 Dmitry A. Nezhelskoy
  * @license "BSD-3-Clause"
  */
 
@@ -22,7 +22,7 @@ class ReturnUrl extends ActionFilter
     /**
      * This method is invoked right before an action is to be executed (after all possible filters.)
      * You may override this method to do last-minute preparation for the action.
-     * @param Action $action the action to be executed.
+     * @param \yii\base\Action $action the action to be executed.
      * @return boolean whether the action should continue to be executed.
      */
     public function beforeAction($action)

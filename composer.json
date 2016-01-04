@@ -6,16 +6,13 @@
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name": "Dmitry Nezhelskoy",
-            "email": "dmitry@nezhelskoy.ru",
-            "homepage": "http://nezhelskoy.ru"
+            "name": "Dmitry A. Nezhelskoy",
+            "email": "dmitry@nezhelskoy.pro"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": "*"
+        "yiisoft/yii2": "~2.0.0"
     },
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "nezhelskoy\\returnUrl\\": ""

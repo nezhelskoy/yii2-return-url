@@ -1,4 +1,4 @@
-Copyright © 2014, Dmitry Nezhelskoy
+Copyright © 2014 - 2016, Dmitry A. Nezhelskoy
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
