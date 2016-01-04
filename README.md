@@ -4,29 +4,23 @@ Keeps current URL in session for controller actions so we can return to it if ne
 
 This is Yii2 port of [set-return-url-filter](https://github.com/yiiext/set-return-url-filter) extension.
 
-### Install via Composer
+### Installation
 
-In "composer.json" your project, add the following lines:
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-~~~javascript
-"repositories": [
-    ...
-    {
-        "type": "vcs",
-        "url": "https://github.com/nezhelskoy/yii2-return-url"
-    }
-],
-"require": {
-    ...
-    "nezhelskoy/yii2-return-url": "*"
-},
-~~~
-
-Then update your project:
+Either run
 
 ~~~
-php composer.phar update --prefer-dist
+php composer.phar require --prefer-dist nezhelskoy/yii2-return-url
 ~~~
+
+Or add
+
+~~~
+"nezhelskoy/yii2-return-url": "~0.1.0"
+~~~
+
+to the require section of your `composer.json` file.
 
 ### Usage
 
