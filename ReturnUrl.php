@@ -14,7 +14,7 @@ use yii\base\ActionFilter;
 /**
  * ReturnUrl filter
  * 
- * Keep current URL (if it's not an AJAX url) in session so that the browser may be redirected back.
+ * Keep current URL (if it's a GET url and it's not an AJAX url) in session so that the browser may be redirected back.
  */
 class ReturnUrl extends ActionFilter
 {
@@ -27,9 +27,10 @@ class ReturnUrl extends ActionFilter
      */
     public function beforeAction($action)
     {
-        if ( ! Yii::$app->request->getIsAjax()) {
-            Yii::$app->user->setReturnUrl(Yii::$app->request->getUrl());
+        if (Yii::$app->getRequest()->getIsGet() && !Yii::$app->getRequest()->getIsAjax()) {
+            Yii::$app->getUser()->setReturnUrl(Yii::$app->getRequest()->getUrl());
         }
+
         return true;
     }
 }
