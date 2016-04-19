@@ -31,6 +31,6 @@ class ReturnUrl extends ActionFilter
             Yii::$app->getUser()->setReturnUrl(Yii::$app->getRequest()->getUrl());
         }
 
-        return parent::beforeAction($action);
+        return true;
     }
 }
